@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="front/common/layout">
+
+<div layout:fragment="content">
+    <script>
+        function do_search(val){
+            let search_name = $('#search_name').val();
+
+            if(nullChk(val)!='') {
+                search_name = $(val).text().replace(
+            }
+
+        }
+    </script>
+    <h1>hello World!!!!!!!!!!!</h1>
+    <div>
+        <input type="text" id="search_name" placeholder="제품명을 입력해 주세요" onfocus="this.placeholder=''" onblur="this.placeholder='검색어를 입력해주세요'" onkeyup="excuteEnter(do_search);">
+        <button onclick="do_search();"></button>
+    </div>
+</div>
+</html>

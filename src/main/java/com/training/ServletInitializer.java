@@ -1,5 +1,6 @@
-package com.training.cms_Thymeleaf;
+package com.training;
 
+import com.training.CmsThymeleafApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 

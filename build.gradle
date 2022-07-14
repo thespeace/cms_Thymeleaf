@@ -21,8 +21,9 @@ dependencies {
 	runtimeOnly 'mysql:mysql-connector-java'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 }
 
-tasks.named('test') {
+tasks.named('test') { //빌드관련 설정 ex) ssh명령어를 사용해서 경로설정하는둥 빌드관련 설정 가능
 	useJUnitPlatform()
 }

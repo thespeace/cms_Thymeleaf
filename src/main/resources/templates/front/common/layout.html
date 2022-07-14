@@ -1,0 +1,33 @@
+<!--
+Layout은 fragment들이 조합된 html입니다.
+th:replace="fragment경로 :: fragment이름" 속성은 해당 영역을 fragment로 치환하겠다는 의미입니다.
+layout:fragment="content"는 해당 layout을 사용하는 content의 내용을 불러오겠다는 의미입니다.
+-->
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My First ThymeLeaf Project</title>
+
+    <!-- config fragment 사용
+    <th:block th:replace="fragment/config :: configFragment"></th:block>-->
+</head>
+
+<body>
+    <div>
+        <!-- header fragment 사용 -->
+        <th:block th:replace="front/common/header :: frontHeader"></th:block>
+        <div>
+            <main>
+                <!-- content fragment 사용(현재 layout을 사용하는 content fragment의 내용을 삽입한다. -->
+                <th:block layout:fragment="content"></th:block>
+            </main>
+        <!-- footer fragment 사용 -->
+        <th:block th:replace="front/common/footer :: frontFooter"></th:block>
+        </div>
+    </div>
+</body>
+</html>
